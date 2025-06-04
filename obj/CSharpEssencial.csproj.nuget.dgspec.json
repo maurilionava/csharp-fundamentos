@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nava/Documents/repo/CSharpEssencial/CSharpEssencial.csproj": {}
+    "/home/nava/Documents/repo/csharp-fundamentals/CSharpEssencial.csproj": {}
   },
   "projects": {
-    "/home/nava/Documents/repo/CSharpEssencial/CSharpEssencial.csproj": {
+    "/home/nava/Documents/repo/csharp-fundamentals/CSharpEssencial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nava/Documents/repo/CSharpEssencial/CSharpEssencial.csproj",
+        "projectUniqueName": "/home/nava/Documents/repo/csharp-fundamentals/CSharpEssencial.csproj",
         "projectName": "CSharpEssencial",
-        "projectPath": "/home/nava/Documents/repo/CSharpEssencial/CSharpEssencial.csproj",
+        "projectPath": "/home/nava/Documents/repo/csharp-fundamentals/CSharpEssencial.csproj",
         "packagesPath": "/home/nava/.nuget/packages/",
-        "outputPath": "/home/nava/Documents/repo/CSharpEssencial/obj/",
+        "outputPath": "/home/nava/Documents/repo/csharp-fundamentals/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nava/.nuget/NuGet/NuGet.Config"

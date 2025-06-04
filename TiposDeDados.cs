@@ -1,4 +1,4 @@
-public class Fundamentos
+public class TipoDeDados
 {
     /*
         Tipos de dados - fortemente tipadas

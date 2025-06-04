@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 public class Usuario
 {
     public string Nome { get; set; }
