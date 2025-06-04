@@ -1,0 +1,14 @@
+/home/nava/Documents/repo/CSharpEssencial/bin/Debug/net9.0/CSharpEssencial
+/home/nava/Documents/repo/CSharpEssencial/bin/Debug/net9.0/CSharpEssencial.deps.json
+/home/nava/Documents/repo/CSharpEssencial/bin/Debug/net9.0/CSharpEssencial.runtimeconfig.json
+/home/nava/Documents/repo/CSharpEssencial/bin/Debug/net9.0/CSharpEssencial.dll
+/home/nava/Documents/repo/CSharpEssencial/bin/Debug/net9.0/CSharpEssencial.pdb
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/CSharpEssencial.GeneratedMSBuildEditorConfig.editorconfig
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/CSharpEssencial.AssemblyInfoInputs.cache
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/CSharpEssencial.AssemblyInfo.cs
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/CSharpEssencial.csproj.CoreCompileInputs.cache
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/CSharpEssencial.dll
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/refint/CSharpEssencial.dll
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/CSharpEssencial.pdb
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/CSharpEssencial.genruntimeconfig.cache
+/home/nava/Documents/repo/CSharpEssencial/obj/Debug/net9.0/ref/CSharpEssencial.dll
