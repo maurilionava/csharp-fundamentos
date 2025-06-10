@@ -1,6 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-string diretorio = "diretorio-aux";
-string arquivoSemExtensao = "arquivo";
+﻿// string diretorio = "diretorio-aux";
+// string arquivoSemExtensao = "arquivo";
 
 // string path = Path.Combine(diretorio, arquivoSemExtensao);
 
@@ -15,4 +14,30 @@ string arquivoSemExtensao = "arquivo";
 // serializadorJson.SerializarJson(path, usuario);
 // serializadorJson.DeserializarJson(path, usuario.GetType());
 
-Console.ReadLine();
+// Classe classe1 = new(true);
+// Classe classe2 = new(true);
+// Classe classe3 = new(true);
+
+// classe1.TestarArgumentosPorValor();
+// classe1.TestarArgumentosPorReferencia();
+
+// Enum testeEnum = new();
+// testeEnum.TestarEnum();
+
+// TratamentoDeErros t = new();
+// t.TestarTryCatch();
+
+// RepeticaoGotoLabel r = new();
+// r.TestarRepeticaoGotoLabel();
+
+// RepeticaoWhile r = new();
+// r.TestarWhile();
+
+// RepeticaoFor r = new();
+// r.TestarRepeticaoFor();
+
+TesteArray t = new();
+// t.TestarArrayBidimensional();
+t.TestarArrayUnidimensional();
+
+// Console.ReadLine();

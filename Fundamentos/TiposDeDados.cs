@@ -1,6 +1,11 @@
 public class TipoDeDados
 {
     /*
+        variáveis de valor = sempre possuem um valor
+            (numéricos, char, bool, struct)
+        variáveis de referência = podem ou não possuir uma referência
+            (object, string, class)
+
         Tipos de dados - fortemente tipadas
         Tipos de referência do local na memória de armazenamento HEAP
             object(tipo base de todos os outros tipos) string(imutáveis) dynamic(resolvidos em tempo de execução) class
