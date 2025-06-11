@@ -1,3 +1,5 @@
+using System.Collections;
+
 public class TesteArray
 {
     /*
@@ -8,8 +10,8 @@ public class TesteArray
     public void TestarArrayUnidimensional()
     {
         // inicialização
-        int[] numeros0; // declaração da variável
-        numeros0 = new int[4] { 1, 2, 3, 4 }; // alocação de memória
+        int[] numeros; // declaração da variável
+        numeros = new int[4] { 1, 2, 3, 4 }; // alocação de memória
         int[] numeros1 = new int[] { 1, 2, 3, 4 };
         int[] numeros2 = { 1, 2, 3, 4 };
 
@@ -18,12 +20,13 @@ public class TesteArray
         //     Console.WriteLine($"{numeros0[aux]}");
         // }
 
-        foreach (var numero in numeros0)
-        {
-            Console.Write($"{numero} ");
-        }
+        ExibirArray(numeros);
     }
-
+    
+    /*
+        A quantidade de elementos em um array multidimensional é igual a x * y * ...
+        Se array [2,3] seu total de elementos é 2*3=6
+    */
     public void TestarArrayBidimensional()
     {
         int[,] matriz; // declaração da variável
@@ -68,5 +71,28 @@ public class TesteArray
 
     public void TestarClasseArray()
     {
+        string[] valores = { "ECHO", "DELTA", "CHARLIE", "BRAVO", "ALFA" };
+
+        ExibirArray(valores);
+        
+        Array.Sort(valores);
+
+        ExibirArray(valores);
+
+        string valorPesquisa = "CHARLIE";
+        int indicePesquisa = Array.BinarySearch(valores, valorPesquisa);
+        Console.WriteLine($"Valor {valorPesquisa} encontrado na posição {indicePesquisa}");
+
+        Array.Clear(valores);
+        ExibirArray(valores);
+    }
+
+    private void ExibirArray(Array vetor)
+    {
+        foreach (var valor in vetor)
+        {
+            Console.Write($"{valor} ");
+        }
+        Console.WriteLine();
     }
 }

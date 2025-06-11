@@ -36,8 +36,15 @@
 // RepeticaoFor r = new();
 // r.TestarRepeticaoFor();
 
-TesteArray t = new();
+// TesteArray t = new();
 // t.TestarArrayBidimensional();
-t.TestarArrayUnidimensional();
+// t.TestarArrayUnidimensional();
+// t.TestarClasseArray();
+
+// TesteArrayList t = new();
+// t.TestarArrayList();
+
+TesteList t = new();
+t.TestarList();
 
 // Console.ReadLine();
