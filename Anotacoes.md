@@ -2,6 +2,8 @@ Diferenças entre ValueType e ReferenceType
 ValueType armazena um valor diretamente na memória
 ReferenceType armazena uma referência a um espaço da memória que contém os dados
 
+Os processamentos de boxing e unboxing degradam a performance
+
 Boxing: conversão do ValueType para ReferenceType
 int num = 2;
 Object obj = num; // boxing

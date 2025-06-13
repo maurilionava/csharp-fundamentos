@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices.Marshalling;
 
-public class Matematica
+public class ClasseMatematica
 {
     public void TestarOperadoresAritmeticos()
     {
