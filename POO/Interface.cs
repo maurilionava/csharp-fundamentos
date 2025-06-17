@@ -9,5 +9,8 @@ interface IInterface
 
 public class FilhoInterface() : IInterface
 {
-    
+    public void Metodo()
+    {
+        throw new NotImplementedException();
+    }
 }

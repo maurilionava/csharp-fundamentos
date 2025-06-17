@@ -7,5 +7,6 @@ Tipos de relacionamentos entre classes
 
         AGREGAÇÃO: as partes existem independentes uma da outra
             departamento e professor
+            relacionamento fraco do tipo 'tem um'
 
 Generics

@@ -44,7 +44,10 @@
 // TesteArrayList t = new();
 // t.TestarArrayList();
 
-TesteList t = new();
-t.TestarList();
+// TesteList t = new();
+// t.TestarList();
+
+// TratamentoDeErros t = new();
+// t.TestarNovaExcecao();
 
 // Console.ReadLine();
