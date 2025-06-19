@@ -50,6 +50,9 @@
 // TratamentoDeErros t = new();
 // t.TestarNovaExcecao();
 
-Console.WriteLine("");
+Eventos e = new();
+e.TestarEventoNotificacao();
+
+Console.ReadKey();
 
 // Console.ReadLine();
