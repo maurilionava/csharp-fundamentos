@@ -19,8 +19,15 @@ public class Delegados
 
     // atribuir o método de destino
     Delegado d1 = new Delegado(MetodoDelegado);
-    // ou
+    // ou de forma simplificada
     Delegado d2 = MetodoDelegado;
     // ou define expressão lambda
     Delegado d3 = (msg) => Console.WriteLine();
+
+    public void TestarDelegado()
+    {
+        d1.Invoke("Hello Delegado");
+        d2("Hello Delegado");
+        d3("Hello Delegado");
+    }
 }

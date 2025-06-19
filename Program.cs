@@ -50,4 +50,6 @@
 // TratamentoDeErros t = new();
 // t.TestarNovaExcecao();
 
+Console.WriteLine("");
+
 // Console.ReadLine();
