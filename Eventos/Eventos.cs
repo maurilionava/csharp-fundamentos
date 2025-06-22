@@ -17,8 +17,8 @@ public class Eventos
     public void TestarEventoNotificacao()
     {
         Pedido p = new();
-        p.OnCriarPedido += Email.Enviar;
-        p.OnCriarPedido += SMS.Enviar;
+        p.OnCriarPedido += NotificadorEmail.ManipuladorDeEvento;
+        p.OnCriarPedido += NotificadorSMS.ManipuladorDeEvento;
         p.CriarPedido();
     }
 }
@@ -38,18 +38,18 @@ class Pedido
     }
 }
 
-public static class SMS
+public class NotificadorEmail
 {
-    public static void Enviar()
+    public static void ManipuladorDeEvento()
     {
-        Console.WriteLine("Enviando um SMS");
+        System.Console.WriteLine("Notificador via email");
     }
 }
 
-public static class Email
+public class NotificadorSMS
 {
-    public static void Enviar()
+    public static void ManipuladorDeEvento()
     {
-        Console.WriteLine("Enviando um email");
+        System.Console.WriteLine("Notificador via sms");
     }
 }

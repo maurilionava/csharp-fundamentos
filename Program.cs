@@ -50,8 +50,13 @@
 // TratamentoDeErros t = new();
 // t.TestarNovaExcecao();
 
-Eventos e = new();
-e.TestarEventoNotificacao();
+// Eventos e = new();
+// e.TestarEventoNotificacao();
+
+// using t;
+
+// string nome = "teste";
+// string? stringInvertida = nome.InterveString();
 
 Console.ReadKey();
 

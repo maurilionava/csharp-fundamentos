@@ -14,6 +14,11 @@
             implementado a partir de heranças e métodos virtuais
 
     Implementação via herança (sobrescrever), interface(diferentes métodos com mesmo nome) e abstração ()
+
+    Vantagens:
+        reduz o acoplamento entre classes
+        reutilização de códigos
+        generalização de algoritmos e estrutura de dados
 */
 public class Polimorfismo
 {
