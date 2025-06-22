@@ -57,6 +57,8 @@
 
 // string nome = "teste";
 // string? stringInvertida = nome.InterveString();
+BaseAssincrona b = new();
+b.TestarMetodoSincrono();
 
 Console.ReadKey();
 
