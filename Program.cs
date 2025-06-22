@@ -50,8 +50,11 @@
 // TratamentoDeErros t = new();
 // t.TestarNovaExcecao();
 
-Eventos e = new();
-e.TestarEventoNotificacao();
+// Eventos e = new();
+// e.TestarEventoNotificacao();
+
+BaseAssincrona b = new();
+b.TestarMetodoSincrono();
 
 Console.ReadKey();
 
