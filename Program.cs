@@ -53,8 +53,12 @@
 // Eventos e = new();
 // e.TestarEventoNotificacao();
 
-BaseAssincrona b = new();
-b.TestarMetodoSincrono();
+// BaseAssincrona b = new();
+// b.TestarMetodoSincrono();
+
+CafeDaManhaSync.CafeSync();
+var task = CafeDaManhaAsync.CafeAsync();
+await task;
 
 Console.ReadKey();
 

@@ -2,7 +2,7 @@
     Singlecast delegate: referencia e invoca um único método
     Multicast delegate: referencia e invoca mais de um método
 
-    Relembrando: declara, define método destino, invoca o delegate
+    Relembrando: declarar, definir método destino, invocar o delegate
 */
 public class SingleMulticastDelegado
 {
