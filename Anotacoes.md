@@ -15,3 +15,15 @@ int num2 = (int) obj; // unboxing
 
 Todo valor passado para uma ArrayList é convertido para o tipo Object
 Na coleção de List não é realizado o boxing já que é definido o tipo que será armazenado
+
+**REVIEW**
+- Memórias Heap vs memória Stack
+- Tipo de valor vs tipo de referência
+- Propriedades vs campos
+- Tipo anônimo
+- Classes parciais: funciona para classes, interfaces, structs e métodos
+- Os pilares da POO: abstração, encapsulamento, herança, polimorfismo
+- Paradigmas de programação
+- Downcasting e upcasting
+- Delegates
+- Cast vs convert
