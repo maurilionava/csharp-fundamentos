@@ -1,29 +1,40 @@
-Diferenças entre ValueType e ReferenceType
-ValueType armazena um valor diretamente na memória
-ReferenceType armazena uma referência a um espaço da memória que contém os dados
-
-Os processamentos de boxing e unboxing degradam a performance
-
-Boxing: conversão do ValueType para ReferenceType
-int num = 2;
-Object obj = num; // boxing
-
-Unboxing: conversão do ReferenceType para ValueType
-int num = 2;
-Object obj = num; // boxing
-int num2 = (int) obj; // unboxing
-
-Todo valor passado para uma ArrayList é convertido para o tipo Object
-Na coleção de List não é realizado o boxing já que é definido o tipo que será armazenado
-
 **REVIEW**
-- Memórias Heap vs memória Stack
-- Tipo de valor vs tipo de referência
-- Propriedades vs campos
-- Tipo anônimo
+- Memórias *Heap* e *Stack*
+- Tipos de *valor* e *referência*: *ValueType* armazena um valor diretamente na memória enquanto *ReferenceType* armazena uma referência a um espaço da memória que contém os dados
+- Campos vs propriedades
+- Tipo e função anônimas: 
+  - *tipo anônimo*
+  - *função anônima* declaração in-line ou expressãp que pode ser usada sempre que um tipo delegate for esperado. São dois os tipos: métodos anônimos e expressões lambdas
 - Classes parciais: funciona para classes, interfaces, structs e métodos
-- Os pilares da POO: abstração, encapsulamento, herança, polimorfismo
+- Os pilares da POO
+  - abstração
+  - encapsulamento: recurso que impede o acesso direto aos atributos de uma classe
+  - herança: recurso que permite a reutilização, extensão e modificação de comportamento definido em outras classes criando a relação de classe base e classe derivada
+  - polimorfismo: habilidade de diferentes objetos responderem a uma mesma mensagem de formas diferentes 
+- Composição vs agregação
+- Classe vs objeto: *classe* é a estrutura enquanto *objeto* é a instância de uma classe
 - Paradigmas de programação
 - Downcasting e upcasting
-- Delegates
-- Cast vs convert
+- Boxing e unboxing: boxing é a conversão de *ValueType* para *ReferenceType*(int para object) e unboxing o inverso(object para int)
+- *Delegates* é um tipo que representa referências a métodos, que pode ser alterada em tempo de execução, com uma *lista de parâmetros* e *um tipo de retorno*
+  - Singlecast e multicast: single se refere a apenas um método, enquanto o multi se referencia a dois ou mais métodos em sequência
+  - Métodos anônimos
+  - Expressões lambdas: é uma função anônima que pode ser usada para criar *delegates*. Maneira mais curta de representar um método anônimo (sugar syntax). Permite criar métodos in-line sem precisar criar método nomeado separado
+  - Delegates pré definidos: 
+    - Predicate<T> : recebe um argumento do tipo T e retorna um booleano. Utilizado para testar se objeto satisfaz condição
+    - Action<T> : recebe até 16 argumentos e não retorna valor. Utilizado para execução de ação sem retorno de valor
+    - Function<T,TResult> : recebe até 16 argumentos do tipo T e retorno um valor do tipo TResult. Ideal para representar método que executa operação e retorna um resultado
+    - EventHandler e EventHandler<TEventArgs> : utilizados para manipular eventos que não possui ou que possui dados, respectivamente
+  - Eventos e seus manipuladores: mecanismos que permitem que uma classe ou objeto, *publisher*, notifique outras classes ou objetos, *subscriber*, quando alguma ação ocorre
+- *Cast* e *convert*
+- Structs: estrutura de dados armazenada em memória heap ideal para?
+- Passagem de parâmetros por valor(cópia do valor armazenado em memória) e por referência(*ref* e *out*: referência do endereço de memória)
+- Generics: significa a forma geral e não forma específica de forma a serem *parametrizados por tipo*. Possuem os métodos `GetHashCode()` e `Equals()`(compara igualdade de conteúdo)
+  - Benefícios: reutilização de código, type safety, desempenho por não realizar operações de *boxing* e *unboxing*, são fortemente tipadas armazenando apenas um tipo de dados e evitando erros de incompatibilidade de tipo
+- Coleções genéricas
+  - List<T> coleção dinâmica e contígua de objetos = ArrayList
+  - Dictionary<Tkey,TValue> coleção de pares chave-valor não ordenada = HashTable
+  - Queue<T> coleção de objetos FIFO(first-in-first-out)
+  - SortedList<T> coleção de pares chave-valor ordenados
+  - Stack<T> coleção de objetos LIFO(last-int-first-out)
+- Coleções não genéricas: armazenam dados do tipo *Object* fazendo com que sejam realizadas operações de *boxing* e *unboxing* de conversão implícita afetando desempenho
