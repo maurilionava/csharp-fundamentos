@@ -38,3 +38,13 @@
   - SortedList<T> coleção de pares chave-valor ordenados
   - Stack<T> coleção de objetos LIFO(last-int-first-out)
 - Coleções não genéricas: armazenam dados do tipo *Object* fazendo com que sejam realizadas operações de *boxing* e *unboxing* de conversão implícita afetando desempenho
+- *LINQ (Language Integrated Query)* conjunto de recursos para realizar consultas em diferentes coleções que implementem IEnumerable<T> ou IQueryable<T>. Retornos de tipo object e possui *deferred execution* onde somente é realizada a consulta ao iterar sobre a coleção
+- *IEnumerable<T>* e *List<T>* : utilizar a primeira opção para acessar sequencialmente e implementar em diversas coleções, utilizar a segunda opção se for necessário acessar e modificar de forma eficiente uma coleção
+- Programação *assíncrona* e *paralela*: execução de várias tarefas ao mesmo tempo sem o bloqueio da thread principal. Execução de várias tarefas ao mesmo tempo aproveitando os recursos do processador
+    - Task e Task<T> : memória heap e garbage collector, consumo de memória e desempenho
+    - ValueTask e ValueTask<T> : struct armazenado na memória stack, tipo de valor
+
+Task.Run Thread.Run ThreadPool
+Reflection
+maquina de estado
+yield
