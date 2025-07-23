@@ -7,6 +7,8 @@
     Coleções não genéricas(legadas): ArrayList, Stack, SortedList, Queue, Hashtable
     Coleções genéricas: List, SortedList, Queue, LinkedList, HashSet, SortedSet, Dictionary, SortedDictionary
 */
+using System.Collections;
+
 public class Colecoes
 {
     // array: conjunto de elementos de mesmo tipo e tamanho fixo
@@ -81,9 +83,75 @@ public class Colecoes
                 System.Console.WriteLine($"[{i}][{j}]:{array2d[i, j]}");
             }
         }
-        
-        foreach(var elemento in array2d) {
+
+        foreach (var elemento in array2d)
+        {
             System.Console.WriteLine($"{elemento} ");
         }
+    }
+
+    /*
+        ArrayList transforma todos os seus elementos em Object, afetando o desempenho do código
+        Armazena dados de diferentes tipos
+        A orientação para o tratamento de coleções heterogêneas é utilizar List<Object>
+        Para tratamento de coleçoes homogêneas utilizar List<T> trocar T pelo tipo
+    */
+    public void ListaArray()
+    {
+        int[] numeros = new int[3] { 1, 2, 0 };
+
+        ArrayList arrayList1 = new ArrayList() { 1, "xpto", new int[] { 1, 2, 3 }, true };
+        ArrayList arrayList2 = new() { 3, 5, 9, 6 };
+        ArrayList arrayList3 = new();
+
+        arrayList3.Add(3);
+        arrayList3.AddRange(numeros);
+        arrayList3.Insert(0, 4);
+        arrayList3.InsertRange(0, numeros);
+        arrayList3.Sort();
+        arrayList3.Remove(3);
+        arrayList3.RemoveAt(0);
+        arrayList3.RemoveRange(0, 2);
+        arrayList3.Clear();
+        bool resultado = arrayList3.Contains(null);
+
+        if (resultado)
+        {
+            System.Console.WriteLine("elemento encontrado");
+        }
+    }
+
+    /* 
+        estrutura de dados dinâmica, fortemente tipada e similar ao ArrayList
+        não executa operações de boxing e unboxing por ser genérica
+    */
+    public void ListaGenerica()
+    {
+        int[] numeros = new int[3] { 1, 2, 0 };
+
+        List<int> listaGenerica = new List<int>() { 1, 2, 3 };
+        var t = listaGenerica[0];
+
+        listaGenerica.Add(3);
+        listaGenerica.AddRange(numeros);
+        listaGenerica.Insert(0, 4);
+        listaGenerica.InsertRange(0, numeros);
+        listaGenerica.Sort();
+        listaGenerica.Remove(3);
+        listaGenerica.RemoveAt(0);
+        listaGenerica.RemoveRange(0, 2);
+        listaGenerica.Clear();
+    }
+
+    public void ConsultaListaComPredicado()
+    {
+        List<string> cores = new List<string>() { "AZUL", "AMARELO", "VERMELHO", "VERDE", "CINZA", "PRETO", "BRANCO", "AMARELO", "CINZA" };
+
+        string? resultadoCor = cores.Find(c => c == "AZUL");
+        resultadoCor = cores.FindLast(c => c == "CINZA");
+
+        int resultadoIndice = cores.FindIndex(c => c == "CINZA");
+
+        List<string> resultadoLista = cores.FindAll(c => c == "AMARELO");
     }
 }
