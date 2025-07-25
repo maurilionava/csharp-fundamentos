@@ -1,4 +1,17 @@
-﻿// string diretorio = "diretorio-aux";
+﻿var diretorio = "DiretorioAuxiliar";
+var arquivo = "log.txt";
+
+Diretorio dir = new();
+dir.CriarDiretorio(diretorio);
+
+Arquivo arq = new();
+arq.CriarArquivo(diretorio, arquivo);
+arq.LogarDatahora(diretorio, arquivo);
+arq.CriarBackup(diretorio, arquivo);
+arq.Informacoes(diretorio, arquivo);
+arq.LerArquivo(diretorio, arquivo);
+
+// string diretorio = "diretorio-aux";
 // string arquivoSemExtensao = "arquivo";
 
 // string path = Path.Combine(diretorio, arquivoSemExtensao);
@@ -56,10 +69,10 @@
 // BaseAssincrona b = new();
 // b.TestarMetodoSincrono();
 
-CafeDaManhaSync.CafeSync();
-var task = CafeDaManhaAsync.CafeAsync();
-await task;
-
-Console.ReadKey();
+// CafeDaManhaSync.CafeSync();
+// var task = CafeDaManhaAsync.CafeAsync();
+// await task;
 
 // Console.ReadLine();
+
+Console.ReadKey();

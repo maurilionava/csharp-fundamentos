@@ -150,8 +150,23 @@ public class Colecoes
         string? resultadoCor = cores.Find(c => c == "AZUL");
         resultadoCor = cores.FindLast(c => c == "CINZA");
 
-        int resultadoIndice = cores.FindIndex(c => c == "CINZA");
+        int resultadoIndice = cores.FindIndex(c => c.Contains('Z'));
 
         List<string> resultadoLista = cores.FindAll(c => c == "AMARELO");
+    }
+
+    public void ClasseRandom()
+    {
+        var semente = Guid.NewGuid().GetHashCode();
+        Random random = new(semente);
+
+        random.Next();
+        random.Next(10);
+        random.Next(0, 10);
+        random.NextInt64();
+        random.NextDouble();
+
+        byte[] array = new byte[10];
+        random.NextBytes(array);
     }
 }
