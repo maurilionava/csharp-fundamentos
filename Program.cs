@@ -1,15 +1,21 @@
 ﻿var diretorio = "DiretorioAuxiliar";
-var arquivo = "log.txt";
 
 Diretorio dir = new();
 dir.CriarDiretorio(diretorio);
 
-Arquivo arq = new();
-arq.CriarArquivo(diretorio, arquivo);
-arq.LogarDatahora(diretorio, arquivo);
-arq.CriarBackup(diretorio, arquivo);
-arq.Informacoes(diretorio, arquivo);
-arq.LerArquivo(diretorio, arquivo);
+Serializacao serializacao = new();
+// serializacao.JsonSerializar();
+// serializacao.JsonDeserializar();
+// serializacao.XMLSoapSerializar();
+serializacao.XMLSoapDeserializar();
+
+// var arquivo = "log.txt";
+// Arquivo arq = new();
+// arq.CriarArquivo(diretorio, arquivo);
+// arq.LogarDatahora(diretorio, arquivo);
+// arq.CriarBackup(diretorio, arquivo);
+// arq.Informacoes(diretorio, arquivo);
+// arq.LerArquivo(diretorio, arquivo);
 
 // string diretorio = "diretorio-aux";
 // string arquivoSemExtensao = "arquivo";
@@ -75,4 +81,4 @@ arq.LerArquivo(diretorio, arquivo);
 
 // Console.ReadLine();
 
-Console.ReadKey();
+// Console.ReadKey();
