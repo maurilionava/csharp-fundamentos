@@ -6,6 +6,9 @@
 
     Coleções não genéricas(legadas): ArrayList, Stack, SortedList, Queue, Hashtable
     Coleções genéricas: List, SortedList, Queue, LinkedList, HashSet, SortedSet, Dictionary, SortedDictionary
+
+    não genéricas e genéricas: ArrayList > List<T>, HashTable > Dictionary<TKey,TValue>, Queue > Queue<T>,
+        SortedList > SortedList<T>, Stack > Stack<T>
 */
 using System.Collections;
 

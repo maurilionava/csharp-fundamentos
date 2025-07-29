@@ -1,13 +1,21 @@
-﻿var diretorio = "DiretorioAuxiliar";
+﻿// HTTPClientTeste client = new();
+// string url = "https://www.macoratti.net/";
+// client.GetResponse(url);
 
-Diretorio dir = new();
-dir.CriarDiretorio(diretorio);
+SectionLINQ sectionLINQ = new();
+// sectionLINQ.ImprimirUsuarios();
+sectionLINQ.TestarFiltros();
 
-Serializacao serializacao = new();
+// var diretorio = "DiretorioAuxiliar";
+
+// Diretorio dir = new();
+// dir.CriarDiretorio(diretorio);
+
+// Serializacao serializacao = new();
 // serializacao.JsonSerializar();
 // serializacao.JsonDeserializar();
 // serializacao.XMLSoapSerializar();
-serializacao.XMLSoapDeserializar();
+// serializacao.XMLSoapDeserializar();
 
 // var arquivo = "log.txt";
 // Arquivo arq = new();
