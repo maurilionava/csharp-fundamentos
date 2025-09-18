@@ -125,10 +125,16 @@ public class ColecoesGenericas
         v_queue.Enqueue(1);
         v_queue.Enqueue(2);
         v_queue.Enqueue(3);
+
         v_queue.Dequeue();
+
+        int v_int = v_queue.Peek();
+        v_int = v_queue.Count();
+        bool v_bool = v_queue.Contains(2);
+        v_queue.Clear();
     }
 
-    public void Testar()
+    public void TestarList()
     {
         List<int> v_list = new() { 1, 2 };
 
@@ -141,4 +147,6 @@ public class ColecoesGenericas
             {1,"BRASIL"}
          };
     }
+
+    // TODO: ReadOnlyCollection<T>
 }

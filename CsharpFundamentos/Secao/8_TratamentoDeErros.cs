@@ -1,3 +1,8 @@
+/// <summary>
+/// Erros podem ser gerados pela entrada do usuário, problemas de lógica ou permissões do sistema
+/// Exceção: condição de erro ou comportamento inesperado que ocorre durante a execução de programa
+/// 
+/// </summary>
 public class TratamentoDeErros
 {
     public void Testar()
@@ -6,9 +11,14 @@ public class TratamentoDeErros
         {
             throw new ExcecaoPersonalizada("ERRO PERSONALIZADO");
         }
-        catch (ExcecaoPersonalizada e)
+        catch (ExcecaoPersonalizada e) when (e.Message.Contains("PERSONALIZADO"))
         {
             System.Console.WriteLine("TRATANDO EXCEÇÃO PERSONALIZADA");
+            System.Console.WriteLine(e.Message);
+            System.Console.WriteLine(e.StackTrace);
+            System.Console.WriteLine(e.InnerException);
+            System.Console.WriteLine(e.Source);
+            System.Console.WriteLine(e.HelpLink);
         }
         catch (Exception e)
         {
@@ -18,6 +28,8 @@ public class TratamentoDeErros
         {
             System.Console.WriteLine("EXECUTANDO BLOCO FINALLY");
         }
+
+        //THROW E THROW EX
     }
 }
 
