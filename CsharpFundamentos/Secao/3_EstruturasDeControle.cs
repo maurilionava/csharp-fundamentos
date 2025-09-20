@@ -1,3 +1,9 @@
+/*
+* Estruturas de controle são usadas para controlar o fluxo de execução do código com base em condições ou repetições.
+* Elas incluem estruturas condicionais (if, else, switch) e estruturas de repetição (for, while, do-while, foreach).
+* Essas estruturas permitem que o programa tome decisões e execute blocos de código repetidamente, tornando-o mais dinâmico e funcional.
+*/
+using System.Collections.Generic;
 public class EstruturasDeControle
 {
     public void Testar()
@@ -67,14 +73,14 @@ public class EstruturasDeControle
             stringList.RemoveAt(0);
         } while (stringList.Count > 0);
 
-        // LABEL GOTO
-        repetir:
-            int controle = 10;
-            if (controle > 0)
-            {
-                System.Console.WriteLine(controle);
-                controle++;
-                goto repetir;
-            }
+    // LABEL GOTO
+    repetir:
+        int controle = 10;
+        if (controle > 0)
+        {
+            System.Console.WriteLine(controle);
+            controle++;
+            goto repetir;
+        }
     }
 }

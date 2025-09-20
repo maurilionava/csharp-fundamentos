@@ -1,3 +1,8 @@
+/*
+* Serialização e desserialização em C# usando JSON e XML.
+* Demonstra o uso de System.Text.Json para JSON e System.Xml.Serialization para XML.
+* A serialização é o processo de converter um objeto em um formato que pode ser facilmente armazenado ou transmitido.
+*/
 using System.Text.Json;
 using System.Xml.Serialization;
 
@@ -44,11 +49,12 @@ public class Serializacao
     {
         string caminhoArquivo = @"./arquivo.xml";
         XmlSerializer xmlSerializer = new XmlSerializer(typeof(ClasseAux));
+        
         using (StreamWriter sw = new(caminhoArquivo))
         {
-            xmlSerializer.Serialize(sw, classeAux);
+            xmlSerializer.Deserialize(File.OpenText(caminhoArquivo));
         }
-        xmlSerializer.Deserialize()
+        // xmlSerializer.Deserialize()
     }
 }
 

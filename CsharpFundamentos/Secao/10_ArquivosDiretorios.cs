@@ -1,3 +1,8 @@
+/*
+* Manipulação de arquivos e diretórios em C# usando System.IO.
+* Inclui operações como criar, copiar, mover, excluir e ler arquivos e diretórios.
+* Demonstra o uso de classes como File, Directory, FileInfo, DirectoryInfo e Path.
+*/
 public class Arquivos
 {
     // verbatim
@@ -35,14 +40,25 @@ public class Diretorios
 
     public void Testar()
     {
-        Directory.CreateDirectory(diretorio);
-        Directory.Delete(diretorio);
-        Directory.Exists(diretorio);
+        DirectoryInfo di = Directory.CreateDirectory(diretorio);
         string[] arquivos = Directory.GetFiles(diretorio);
+        string[] diretorios = Directory.GetDirectories(diretorio);
+        bool exists = Directory.Exists(diretorio);
+        string currentDirectory = Directory.GetCurrentDirectory();
+        Directory.Delete(diretorio);
         Directory.Move(diretorio, novoDiretorio);
-        Directory.GetDirectories(diretorio);
 
         DirectoryInfo directoryInfo = new(diretorio);
+
+        Path.Combine("usr", "share");
+        Path.Exists(diretorio);
+        Path.GetExtension(diretorio);
+        Path.GetFileName(diretorio);
+        string v_randomName = Path.GetRandomFileName();
+        string v_randomPath = Path.GetTempPath();
+        char v_char = Path.PathSeparator;
+        v_char = Path.DirectorySeparatorChar;
+        v_char = Path.VolumeSeparatorChar;;
     }
 }
 
@@ -50,6 +66,42 @@ public class Streams
 {
     public void Testar()
     {
-        
+        string diretorio = @"./";
+
+        using (FileStream fs = new FileStream(diretorio, FileMode.OpenOrCreate))
+        {
+            using (StreamReader sr = new(fs))
+            {
+                string? linha;
+
+                while ((linha = sr.ReadLine()) is not null)
+                {
+                    System.Console.WriteLine(linha);
+                }
+            }
+        }
+
+        using (FileStream fs = File.Open(diretorio, FileMode.OpenOrCreate))
+        {
+            using (StreamReader sr = new(fs))
+            {
+                string? linha;
+
+                while ((linha = sr.ReadLine()) is not null)
+                {
+                    System.Console.WriteLine(linha);
+                }
+            }
+        }
+
+        using (StreamReader sr = File.OpenText(diretorio))
+        {
+            string? linha;
+
+            while ((linha = sr.ReadLine()) is not null)
+            {
+                System.Console.WriteLine(linha);
+            }
+        }
     }
 }

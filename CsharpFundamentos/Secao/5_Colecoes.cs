@@ -1,3 +1,8 @@
+/*
+* Coleções são estruturas de dados que armazenam múltiplos valores em uma única variável.
+* Elas facilitam a organização, manipulação e acesso a conjuntos de dados relacionados.
+* As coleções mais comuns em C# incluem Arrays, Lists, Dictionaries e HashSets.
+*/
 using System.Collections;
 
 public class Colecoes

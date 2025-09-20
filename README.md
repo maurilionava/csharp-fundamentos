@@ -2,6 +2,12 @@
 
 ## CONCEITOS BASE
 
+- processamento assíncrono e paralelo: 
+  - assíncrono: permite que uma operação seja iniciada e o controle seja retornado ao chamador antes que a operação seja concluída, permitindo que outras operações sejam executadas enquanto se espera pela conclusão da operação assíncrona.
+  - paralelo: envolve a execução simultânea de múltiplas operações ou tarefas, geralmente em múltiplos núcleos de processador, para melhorar o desempenho e reduzir o tempo total de execução.
+- programação concorrente
+- máquina de estados:
+  - uma máquina de estados é um modelo matemático usado para representar o comportamento de um sistema que pode estar em um número finito de estados distintos. A máquina de estados transita entre esses estados com base em eventos ou condições específicas, permitindo a modelagem de sistemas complexos de forma estruturada e compreensível.
 - plataforma .net
 - diferença entre .net framework, .net core e .net
 - clr(common language runtime)
@@ -41,6 +47,18 @@
 - classe
   - membros
     - atributos e comportamentos (métodos)
+- delegates
+  - definição e uso:
+    - Delegados são tipos que representam referências a métodos com uma lista específica de parâmetros e um tipo de retorno.
+    - Eles são semelhantes aos ponteiros de função em C/C++, mas são seguros e orientados a objetos.
+    - Delegados são usados para implementar eventos e callbacks.
+    - Eles permitem que métodos sejam passados como parâmetros, facilitando a criação de código flexível e reutilizável.
+    - Usos:
+      - Callbacks: Delegados são frequentemente usados para definir callbacks, permitindo que métodos sejam chamados quando uma operação assíncrona é concluída ou quando um evento ocorre.
+      - Eventos: Delegados são a base para o sistema de eventos em C#. Eles permitem que múltiplos métodos sejam associados a um evento e chamados quando o evento é disparado.
+      - Passagem de métodos como parâmetros: Delegados permitem que métodos sejam passados como argumentos para outros métodos, facilitando a criação de código reutilizável e flexível.
+- eventos
+- lambda expressions
 
 ## COMANDOS BÁSICOS DO DRIVER DOTNET
 ```
@@ -79,6 +97,8 @@ dotnet --version
   - Uma classe é um modelo ou blueprint que define a estrutura e o comportamento de um tipo de dado, enquanto um objeto é uma instância concreta dessa classe, contendo valores específicos para os atributos definidos na classe.
 - Qual a diferença entre a classe Convert, o método Parse e o Cast?
   - A classe Convert fornece métodos para converter tipos de dados de forma segura, lidando com exceções. O método Parse é usado para converter strings em tipos específicos, mas pode lançar exceções se a conversão falhar. O Cast é uma conversão explícita entre tipos compatíveis, mas pode resultar em erros em tempo de execução se os tipos não forem compatíveis.
+  - Diferença entre programação assíncrona e programação paralela?
+    - Programação assíncrona permite que tarefas sejam iniciadas e continuem a execução sem bloquear o fluxo principal do programa, ideal para operações de I/O. Programação paralela envolve a execução simultânea de múltiplas tarefas ou threads para melhorar o desempenho em operações computacionalmente intensivas.
   - Exemplo:
     ```csharp
     int number1 = Convert.ToInt32("123"); // Converte string para int, lança exceção se falhar

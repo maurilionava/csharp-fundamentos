@@ -1,3 +1,6 @@
+/*
+* Classes são modelos para criar objetos, encapsulando dados e comportamentos relacionados.
+*/
 public class ClasseBase
 {
     /* DECLARAÇÃO DE VARIÁVEIS */
@@ -30,12 +33,12 @@ public class ClasseBase
         System.Console.WriteLine($"{ClasseBase.RetornarDataHora} : CONSTRUTOR ESTÁTICO BASE SEM PARÂMETROS");
         qtde_instancias = 0;
     }
-    
+
     public ClasseBase()
-{
-    System.Console.WriteLine($"{ClasseBase.RetornarDataHora} : CONSTRUTOR BASE SEM PARÂMETROS");
-    ClasseBase.qtde_instancias += 1;
-}
+    {
+        System.Console.WriteLine($"{ClasseBase.RetornarDataHora} : CONSTRUTOR BASE SEM PARÂMETROS");
+        ClasseBase.qtde_instancias += 1;
+    }
     public ClasseBase(int v_int) : this()
     {
         System.Console.WriteLine($"{ClasseBase.RetornarDataHora} : CONSTRUTOR BASE COM PARÂMETRO");
@@ -65,7 +68,8 @@ public class ClasseBase
     private int ArgumentoPorValor(int v_int1, int v_int2) => v_int1 + v_int2;
 
     /* PASSAGEM DE ARGUMENTO POR REFERÊNCIA (REF E OUT) */
-    private void ArgumentoPorReferenciaRef(ref int v_int1, ref int v_int2) {
+    private void ArgumentoPorReferenciaRef(ref int v_int1, ref int v_int2)
+    {
         v_int1 = 11;
         v_int1 = 22;
     }

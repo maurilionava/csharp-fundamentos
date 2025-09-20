@@ -1,3 +1,9 @@
+/*
+* Generics permitem que classes, interfaces e métodos operem em tipos especificados pelo usuário, aumentando a reutilização de código e a segurança de tipos.
+* Eles são definidos usando parâmetros de tipo, que são substituídos por tipos concretos quando a classe ou método é instanciado ou chamado.
+* Generics ajudam a evitar o uso de tipos como 'object', que exigem conversão de tipos e podem levar a erros em tempo de execução.
+* Eles são amplamente utilizados em coleções, como List<T>, Dictionary<TKey, TValue> e outros tipos de dados genéricos na biblioteca padrão do .NET.
+*/
 public class Generics<T>
 {
     T[] v_array = new T[5];
