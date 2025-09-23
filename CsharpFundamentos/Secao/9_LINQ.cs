@@ -1,5 +1,13 @@
+/*
+* LINQ - Language Integrated Query
+* - Consulta integrada à linguagem
+* - Permite consultar coleções de objetos, bancos de dados, XML, etc.
+* - Sintaxe semelhante a SQL
+* - Operadores principais: where, select, orderby, groupby, join, etc
+* - Execução adiada (deferred execution) - consulta é executada quando os dados são iterados
+* - Pode ser usado com qualquer coleção que implemente IEnumerable<T> ou IQueryable
+*/
 using StudyData;
-
 public class LINQ
 {
     public void Testar()
@@ -31,8 +39,8 @@ public class LINQ
         var QtdeProdutosEmEstoque = produtos.Where(p => p.StockQty > 0)
                                             .Count();
         // select
-        var listaSelect = produtos.Select(p=>p.Id);
-        var r = produtos.Select(p=> new
+        var listaSelect = produtos.Select(p => p.Id);
+        var r = produtos.Select(p => new
         {
             Nome = p.Name,
             PrecoTotalEmEstoque = p.UnitPrice * p.StockQty
@@ -43,12 +51,28 @@ public class LINQ
             System.Console.WriteLine($"{a.Nome} {a.PrecoTotalEmEstoque}");
         }
 
+        // first last single
+        Product? produto = produtos.FirstOrDefault();
+        produto = produtos.LastOrDefault();
+        produto = produtos.SingleOrDefault();
+
+        try
+        {
+            produto = produtos.First();
+            produto = produtos.Last();
+            produto = produtos.Single();
+        }
+        catch (Exception e)
+        {
+            System.Console.WriteLine(e.Message);
+        }
+
         ImprimirListaProdutos(produtosFiltrados.ToList(), "PRODUTOS EM ESTOQUE ORDENADOS POR CATEGORIA E DEPOIS POR NOME"); // .tolist executa a consulta e carrega resultado na memória
         System.Console.WriteLine($"TOTAL DE VALOR EM ESTOQUE: {totalValorProdutos:C2}");
         System.Console.WriteLine($"QTDE DE PRODUTOS EM ESTOQUE: {QtdeProdutosEmEstoque}");
         System.Console.WriteLine($"MÉDIA DO PREÇO UNITÁRIO: {MediaPrecoUnitario}");
         System.Console.WriteLine($"QTDE DE PRODUTOS EM ESTOQUE: {QtdeProdutosEmEstoque}");
-        
+
     }
 
     public void ImprimirListaProdutos(List<Product> lista, string mensagem)
