@@ -54,7 +54,20 @@ public class LINQ
         // first last single
         Product? produto = produtos.FirstOrDefault();
         produto = produtos.LastOrDefault();
-        produto = produtos.SingleOrDefault();
+        // produto = produtos.SingleOrDefault();
+
+        // groupby
+        System.Console.WriteLine($"\n\nGROUPBY");
+        var produtosPorCategoria = produtos.GroupBy(p=>p.Category);
+
+        foreach (var categoria in produtosPorCategoria)
+        {
+            System.Console.WriteLine($"CATEGORIA: {categoria.Key} QTDE: {categoria.Count()}");
+            foreach (var p in categoria)
+            {
+                System.Console.WriteLine($"\t{p.Sku}");
+            }
+        }
 
         try
         {
@@ -67,11 +80,11 @@ public class LINQ
             System.Console.WriteLine(e.Message);
         }
 
-        ImprimirListaProdutos(produtosFiltrados.ToList(), "PRODUTOS EM ESTOQUE ORDENADOS POR CATEGORIA E DEPOIS POR NOME"); // .tolist executa a consulta e carrega resultado na memória
-        System.Console.WriteLine($"TOTAL DE VALOR EM ESTOQUE: {totalValorProdutos:C2}");
-        System.Console.WriteLine($"QTDE DE PRODUTOS EM ESTOQUE: {QtdeProdutosEmEstoque}");
-        System.Console.WriteLine($"MÉDIA DO PREÇO UNITÁRIO: {MediaPrecoUnitario}");
-        System.Console.WriteLine($"QTDE DE PRODUTOS EM ESTOQUE: {QtdeProdutosEmEstoque}");
+        // ImprimirListaProdutos(produtosFiltrados.ToList(), "PRODUTOS EM ESTOQUE ORDENADOS POR CATEGORIA E DEPOIS POR NOME"); // .tolist executa a consulta e carrega resultado na memória
+        // System.Console.WriteLine($"TOTAL DE VALOR EM ESTOQUE: {totalValorProdutos:C2}");
+        // System.Console.WriteLine($"QTDE DE PRODUTOS EM ESTOQUE: {QtdeProdutosEmEstoque}");
+        // System.Console.WriteLine($"MÉDIA DO PREÇO UNITÁRIO: {MediaPrecoUnitario}");
+        // System.Console.WriteLine($"QTDE DE PRODUTOS EM ESTOQUE: {QtdeProdutosEmEstoque}");
 
     }
 
