@@ -146,3 +146,17 @@ public enum MesesEnum
     Fevereiro,
     Marco
 }
+
+public partial class PartialClass
+{
+    public int MyProperty1 { get; set; }
+    public int MyProperty2 { get; set; }
+}
+
+public partial class PartialClass
+{
+    public void Method()
+    {
+        System.Console.WriteLine($"{this.MyProperty1} {this.MyProperty2}");
+    }
+}
