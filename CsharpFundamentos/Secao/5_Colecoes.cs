@@ -67,9 +67,16 @@ public class Colecoes
         }
     }
 
+    /// <summary>
+    /// Geração de números pseudo-aleatórios iniciando a partir de um seed (semente)
+    /// </summary>
     public void Random()
     {
-        var newRandom = new Random();
-        
+        var random = new Random();
+        random = new(DateTime.Now.Year);
+
+        var randomInt = random.Next(1000); // valor máximo
+        randomInt = random.Next(1, 1000); // intervalo
+        var randomDouble = random.NextDouble(); // intervalo entre 0.0 e 1.0
     }
 }

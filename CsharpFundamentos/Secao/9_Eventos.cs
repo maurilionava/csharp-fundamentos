@@ -77,7 +77,7 @@ public class Email : Subscriber
         
     public void Notificar(object? sender, PublisherEventArgs e)
     {
-        System.Console.WriteLine("NOTIFICANDO VIA SMS");
+        System.Console.WriteLine("NOTIFICANDO VIA EMAIL");
     }
 }
 
